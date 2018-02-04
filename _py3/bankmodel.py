@@ -7,7 +7,7 @@ class Bankmod:
     @classmethod
     def getnewid(cls): 
         sql = 'SELECT ContId FROM article_hashcontent ORDER BY ContId DESC LIMIT 1;'
-        csdb_connection = pymysql.connect(host='172.30.2.199', user='app_databank', db='databank',password='Op6d5zfc13&h',init_command='SET NAMES UTF8')
+        csdb_connection = pymysql.connect(host='ip', user='user', db='db',password='&h',init_command='SET NAMES UTF8')
         cs_cursor = csdb_connection.cursor()
         cs_cursor.execute(sql)
         id_result = cs_cursor.fetchall()

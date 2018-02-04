@@ -13,7 +13,7 @@ class Cmsmod:
         else:
             sql = 'SELECT art.Content,art.ContId,cont.Title,cont.Url,cont.CatId,cont.CreatedTime FROM cnfol_article as art inner join cnfol_content as cont on art.ContId = cont.ContId and cont.ContId >"'+newid+'" and cont.CreatedTime>"'+sixmonth+'" and art.ContId!="0" ORDER BY art.ContId ASC LIMIT '+limit 
 
-        csdb_connection = pymysql.connect(host='10.1.4.211', user='cnfolCMS', db='cnfolCMS',password='Op6d5zfc13&h',init_command='SET NAMES UTF8')
+        csdb_connection = pymysql.connect(host='ip', user=' ', db=' ',password=' &h',init_command='SET NAMES UTF8')
         cs_cursor = csdb_connection.cursor()
         cs_cursor.execute(sql)
         key_results = cs_cursor.fetchall()
